@@ -32,12 +32,13 @@ const getEvent = async (req, res, next) => {
             .lean()
             .exec();
 
-        event.memberAttendance = event.memberAttendance.map(({ member, ...rest }) => ({ ...rest, ...member }));
-
-        if (!event)
+        if (!event) {
             res.sendStatus(404);
-        else
+        }
+        else {
+            event.memberAttendance = event.memberAttendance.map(({ member, ...rest }) => ({ ...rest, ...member }));
             res.json(event);
+        }
     }
     catch (err) {
         next(new InternalError(err));

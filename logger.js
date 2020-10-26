@@ -4,7 +4,14 @@ const fs = require('fs');
 
 const eventEmitter = new EventEmitter();
 
-const logMessage = (message) => {
+const dir = './logs';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
+const logMessage = (message) => {   
+
     const fileName = `logs/AttendanceMonitoringLogs-${moment().format('YYYY-MM-DD')}.txt`;
 
     fs.appendFile(fileName, message, (err) => {

@@ -69,8 +69,6 @@ const updateAttendance = async (req, res, next) => {
             { $unwind: '$memberInfo' },
         ]);
 
-        console.log(JSON.stringify(eventAttendanceResult, null, 4));
-
         if (eventAttendanceResult.length !== 1) {
             res.sendStatus(404);
             return;

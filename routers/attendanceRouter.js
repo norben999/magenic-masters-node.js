@@ -9,6 +9,11 @@ router.post('/',
     requestValidationHandler,
     attendanceController.addAttendance);
 
+router.put('/:id',
+    attendanceController.attendanceValidation,
+    requestValidationHandler,
+    attendanceController.updateAttendance);
+
 router.delete('/:id',
     attendanceController.deleteAttendance);
 

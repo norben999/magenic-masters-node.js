@@ -34,7 +34,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3100/api/members/e8caa802-15f2-42f3-bff5-4a2a01f65827",
+							"raw": "http://localhost:3100/api/members/d5c2cc20-87f1-4e4d-8be2-000ba33b247c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"path": [
 								"api",
 								"members",
-								"e8caa802-15f2-42f3-bff5-4a2a01f65827"
+								"d5c2cc20-87f1-4e4d-8be2-000ba33b247c"
 							]
 						}
 					},
@@ -55,7 +55,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3100/api/members/search?name=Norben Oriarte&status=Active",
+							"raw": "http://localhost:3100/api/members/search?name=Norben Oriarte2&status=Active",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -69,7 +69,7 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "Norben Oriarte"
+									"value": "Norben Oriarte2"
 								},
 								{
 									"key": "status",
@@ -87,7 +87,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Norben Oriarte\",\r\n    \"status\": \"Actives\",\r\n    \"joinedDate\": \"2020-10-24T17:44:56.614Z\"\r\n}",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"status\": \"In-active\",\r\n    \"joinedDate\": \"2020-01-01\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -154,7 +154,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3100/api/members/4644239f-4392-4734-a4de-d3cf5522c0bb",
+							"raw": "http://localhost:3100/api/members/d5c2cc20-87f1-4e4d-8be2-000ba33b247c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -163,7 +163,7 @@
 							"path": [
 								"api",
 								"members",
-								"4644239f-4392-4734-a4de-d3cf5522c0bb"
+								"d5c2cc20-87f1-4e4d-8be2-000ba33b247c"
 							]
 						}
 					},
@@ -201,7 +201,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3100/api/events/c3711f58-0394-4615-9275-7ecfdc659d24",
+							"raw": "http://localhost:3100/api/events/5e95a157-21ec-4f5f-8332-94291eed6695",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -210,7 +210,7 @@
 							"path": [
 								"api",
 								"events",
-								"c3711f58-0394-4615-9275-7ecfdc659d24"
+								"5e95a157-21ec-4f5f-8332-94291eed6695"
 							]
 						}
 					},
@@ -222,7 +222,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3100/api/events/c3711f58-0394-4615-9275-7ecfdc659d24",
+							"raw": "http://localhost:3100/api/events/search?eventName=NodeJs Masters&startDateTime=2020-10-24T02:00:00.000Z&endDateTime=2020-11-24T14:00:00.000Z",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -231,7 +231,21 @@
 							"path": [
 								"api",
 								"events",
-								"c3711f58-0394-4615-9275-7ecfdc659d24"
+								"search"
+							],
+							"query": [
+								{
+									"key": "eventName",
+									"value": "NodeJs Masters"
+								},
+								{
+									"key": "startDateTime",
+									"value": "2020-10-24T02:00:00.000Z"
+								},
+								{
+									"key": "endDateTime",
+									"value": "2020-11-24T14:00:00.000Z"
+								}
 							]
 						}
 					},
@@ -243,7 +257,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3100/api/events/c3711f58-0394-4615-9275-7ecfdc659d24",
+							"raw": "http://localhost:3100/api/events/export?eventId=5e95a157-21ec-4f5f-8332-94291eed6695",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -252,7 +266,13 @@
 							"path": [
 								"api",
 								"events",
-								"c3711f58-0394-4615-9275-7ecfdc659d24"
+								"export"
+							],
+							"query": [
+								{
+									"key": "eventId",
+									"value": "5e95a157-21ec-4f5f-8332-94291eed6695"
+								}
 							]
 						}
 					},
@@ -265,7 +285,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"eventName\": \"React Masters\",\r\n    \"eventType\": \"Masters\",\r\n    \"startDateTime\": \"2020-10-24 10:00:00\",\r\n    \"endDateTime\": \"2020-11-24 22:00\"\r\n}",
+							"raw": "{\r\n    \"eventName\": \"C# Core\",\r\n    \"eventType\": \"Brownbag\",\r\n    \"startDateTime\": \"2020-11-10 10:00:00\",\r\n    \"endDateTime\": \"2020-11-11 22:00:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -294,7 +314,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"eventName\": \"Node Masters\",\r\n    \"eventType\": \"Masters\",\r\n    \"startDateTime\": \"2020-10-24 10:00:00\",\r\n    \"endDateTime\": \"2020-11-24 22:00\"\r\n}",
+							"raw": "{\r\n    \"eventName\": \"C# Core\",\r\n    \"eventType\": \"Brownbag\",\r\n    \"startDateTime\": \"2021-10-24 10:00:0\",\r\n    \"endDateTime\": \"2020-11-24 22:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -302,7 +322,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3100/api/events/da0dfd0d-424a-435b-ac00-8cb4b9052456",
+							"raw": "http://localhost:3100/api/events/85d94cca-80e1-4ac7-b68f-6127def799cc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -311,7 +331,7 @@
 							"path": [
 								"api",
 								"events",
-								"da0dfd0d-424a-435b-ac00-8cb4b9052456"
+								"85d94cca-80e1-4ac7-b68f-6127def799cc"
 							]
 						}
 					},
@@ -332,7 +352,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3100/api/events/672bc2a8-2802-4c12-976f-6f5df37830c0",
+							"raw": "http://localhost:3100/api/events/85d94cca-80e1-4ac7-b68f-6127def799cc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -341,7 +361,7 @@
 							"path": [
 								"api",
 								"events",
-								"672bc2a8-2802-4c12-976f-6f5df37830c0"
+								"85d94cca-80e1-4ac7-b68f-6127def799cc"
 							]
 						}
 					},
@@ -360,7 +380,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"eventId\": \"5e95a157-21ec-4f5f-8332-94291eed6695\",\r\n    \"memberId\": \"e8caa802-15f2-42f3-bff5-4a2a01f65827\",\r\n    \"timeIn\": \"2020-10-24T02:00:00.000Z\",\r\n    \"timeOut\": \"2020-10-23T02:00:00.000Z\"\r\n}",
+							"raw": "{\r\n    \"eventId\": \"85d94cca-80e1-4ac7-b68f-6127def799cc\",\r\n    \"memberId\": \"e8caa802-15f2-42f3-bff5-4a2a01f65827\",\r\n    \"timeIn\": \"2020-10-24T02:00:00.000Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -383,13 +403,13 @@
 					"response": []
 				},
 				{
-					"name": "DELETE: /attendance/id",
+					"name": "PUT: /attendance/id",
 					"request": {
-						"method": "DELETE",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"eventId\": \"5e95a157-21ec-4f5f-8332-94291eed6695\",\r\n    \"memberId\": \"e8caa802-15f2-42f3-bff5-4a2a01f65827\",\r\n    \"timeIn\": \"2020-10-24T02:00:00.000Z\",\r\n    \"timeOut\": \"2020-10-24T02:00:00.000Z\"\r\n}",
+							"raw": "{\r\n    \"eventId\": \"5e95a157-21ec-4f5f-8332-94291eed6695\",\r\n    \"memberId\": \"9ccc9728-12a5-45f1-ae87-9403d449ab13\",\r\n    \"timeIn\": \"2020-11-24T02:00:00.000Z\",\r\n    \"timeOut\": \"2020-11-27T02:00:00.000Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -397,7 +417,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3100/api/attendance",
+							"raw": "http://localhost:3100/api/attendance/3f186c97-79f4-40a1-bc78-8d7d71f97a91",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -405,7 +425,38 @@
 							"port": "3100",
 							"path": [
 								"api",
-								"attendance"
+								"attendance",
+								"3f186c97-79f4-40a1-bc78-8d7d71f97a91"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE: /attendance/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3100/api/attendance/12fb1fec-89b8-40a1-b2d2-1062d273252e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"api",
+								"attendance",
+								"12fb1fec-89b8-40a1-b2d2-1062d273252e"
 							]
 						}
 					},
